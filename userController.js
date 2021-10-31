@@ -5,7 +5,7 @@ exports.getAllUsers = (req, res) => {
   res.send({ length: db.users.length, users: db.users });
 };
 
-exports.getUserBydId = (req, res) => {
+exports.getUserById = (req, res) => {
   const user = db.users.find((el) => el.id === req.params.id);
 
   if (user) res.send(user);
